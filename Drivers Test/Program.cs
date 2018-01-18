@@ -9,7 +9,8 @@ namespace Drivers_Test
     class Program
     {
         static void Main()
-        {
+        {   
+            //introduction
             Console.WriteLine("Welcome to Driver's License Exam program") ;
             Console.WriteLine("You must anwser 15 questions correctly to pass") ;
             Console.WriteLine("Press any key to start");
@@ -36,6 +37,7 @@ namespace Drivers_Test
             int PASS_SCORE = 15; //constant
             string entry = "" ; 
 
+            //main loop
             for (x = 0; x < questions.Length; x++)
             {
                 Console.WriteLine(questions[x]) ;
@@ -54,12 +56,14 @@ namespace Drivers_Test
                     incorrectHolder = incorrectHolder + 1 ;
                 }
             } ;
+            //questions correct and incorrect
             Console.WriteLine("You got " + correctHolder + " Correct") ;
             Console.WriteLine("And " + incorrectHolder + " Incorrect") ;
             if (correctHolder >= PASS_SCORE)
             {
                 Console.WriteLine("YOU PASSED") ;
             }
+            //ask to repeat
             Console.WriteLine("Would you like to enter another test? (Y/N)") ;
             entry = Console.ReadLine().ToUpper() ;
             while (entry != "Y" && entry != "N")
